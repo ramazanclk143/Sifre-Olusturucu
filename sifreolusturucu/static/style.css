@@ -1,0 +1,129 @@
+/* Genel Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sayfa Arkaplanı */
+body {
+    background: linear-gradient(135deg, #020a21, #2734cb);
+    color: #F9FAFB; /* Açık beyaz yazılar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Konteyner */
+.container {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(8px);
+}
+
+/* Başlıklar */
+h1, h2 {
+    color: #F9FAFB; /* Daha açık renk */
+    margin-bottom: 15px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Alanları */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #60A5FA;
+    border-radius: 6px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2); /* Hafif şeffaf */
+    color: #F9FAFB;
+    transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+    color: #D1D5DB; /* Gri placeholder */
+}
+
+input:focus {
+    border-color: #9333EA;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3); /* Daha belirgin */
+}
+
+/* Butonlar */
+button {
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    background: #372ee0;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0d0470;
+    transform: scale(1.05);
+}
+form button + form button {
+    margin-top: 10px; /* Yukarıdan 10px boşluk ekleyin */
+}
+/* Bağlantılar */
+a {
+    color: #93C5FD; /* Açık mavi */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #BFDBFE;
+}
+
+/* Şifre Gösterim Alanı */
+.password-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    text-align: center;
+}
+.password-form label {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.password-form input[type="number"] {
+    width: 60px;
+    margin-left: 5px;
+}
+/* Responsive Tasarım */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+}

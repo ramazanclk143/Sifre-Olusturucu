@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güçlü Şifre Oluşturucu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Rastgele Güçlü Şifre Oluşturucu</h1>
+    <form method="POST" action="/index" class="password-form">
+        <label><input type="checkbox" name="lowercase" checked> abc</label>
+        <label><input type="checkbox" name="uppercase" checked> ABC</label>
+        <label><input type="checkbox" name="digits" checked> 123</label>
+        <label><input type="checkbox" name="symbols" checked> #$&</label>
+        <label>Şifre Uzunluğu: <input type="number" name="length" min="6" max="32" value="12"></label>
+        <br><br>
+        <button type="submit">Şifre Oluştur</button>
+    </form>
+    <div style="margin-top: 20px;"></div>
+ <!-- Şifre Ekleme Formu -->
+ <form method="POST" action="{{ url_for('add_password') }}">
+    <input type="text" name="new_password" placeholder="Yeni Şifre Girin" required>
+    <button type="submit" style="background-color:rgb(36, 208, 14);">Şifre Ekle</button>
+</form>
+
+    {% if password %}
+    <div>
+        <h2>Oluşturulan Şifre:</h2>
+        <p>{{ password }}</p>
+    </div>
+    {% endif %}
+
+    <!-- Şifreleri Gösterme Butonu -->
+    <form method="GET" action="{{ url_for('view_passwords') }}">
+        <button type="submit">Şifrelerimi Görüntüle</button>
+    </form>
+    <a href="{{ url_for('profile') }}">Profilim</a> 
+    <a href="{{ url_for('logout') }}">Çıkış Yap</a>
+</body>
+</html>

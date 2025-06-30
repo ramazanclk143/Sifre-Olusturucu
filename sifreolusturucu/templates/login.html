@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güçlü Şifre Oluşturucu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h2>Giriş Yap</h2>
+    <form method="POST">
+        <input type="email" name="email" placeholder="E-posta" required><br>
+        <input type="password" name="password" placeholder="Şifre" required><br>
+        <button type="submit" style="background-color:rgb(23, 70, 156);">Giriş Yap</button>
+
+    </form>
+
+     <!-- Yeni: Admin Girişi butonu -->
+     <form action="{{ url_for('admin_login') }}">
+        <button type="submit" style="background-color:rgb(23, 70, 156);">Admin Girişi</button>
+    </form>
+
+    <form action="{{ url_for('home') }}">
+        <button type="submit" style="background-color:rgb(23, 70, 156);">Home</button>
+    </form>
+    
+    <p>Hesabın yok mu? <a href="{{ url_for('register') }}">Kayıt Ol</a></p>
+</body>
+</html>

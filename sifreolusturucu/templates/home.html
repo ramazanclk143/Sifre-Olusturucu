@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Şifre Güvenliği Bilgilendirme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 30px;
+            
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p, li {
+            color: #444;
+            line-height: 1.7;
+        }
+
+        button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Güvenli Şifre Oluşturma Rehberi</h1>
+
+    <p>Güçlü bir şifre, kimlik bilgilerinizin ve verilerinizin kötü amaçlı kişiler tarafından ele geçirilmesini önlemenin ilk adımıdır. Aşağıda güvenli bir şifre oluşturmak ve kullanmak için bazı ipuçlarını bulabilirsiniz.</p>
+
+    <h2>Şifre Güvenliği</h2>
+    <p>Şifreler genel olarak şu yöntemlerle ele geçirilebilir:</p>
+    <ul>
+        <li>Sizi tanıyan bir kişinin hakkınızda bildikleriyle şifre tahmin etmesi</li>
+        <li>Herkesin sık kullandığı bilinen, basit şifrelerin denenmesi ile şifrenin bulunması</li>
+        <li>Özel programlar kullanarak sık kullanılan yüzlerce parola örneğini ya da sözlüklerdeki binlerce kelimenin hızlıca denenmesi</li>
+        <li>İyi korunmayan, yazılı ya da sözlü olarak paylaşılan şifrelerin bulunduğu ortama ulaşılarak ele geçirilmesi</li>
+        <li>Bilgisayar virüsleri gibi zararlı yazılımlar ile şifrelerin izlenmesi</li>
+    </ul>
+
+    <h2>Şifreniz Ele Geçirildiyse Ne Yapmalısınız?</h2>
+    <ul>
+        <li>İlk iş olarak şifrenizi değiştirin.</li>
+        <li>Aynı şifreyi başka sistemlerde de kullanıyorsanız, diğer tüm şifreleri de değiştirin.</li>
+    </ul>
+
+    <h2>Güçlü Şifre Nedir?</h2>
+    <ul>
+        <li>En az 8 karakter uzunluğunda olmalı (tercihen 12+)</li>
+        <li>Büyük harf, küçük harf, rakam ve özel karakter içermelidir</li>
+        <li>Kişisel bilgiler (ad, doğum tarihi, "1234" gibi) içermemeli</li>
+        <li>Her hesap için farklı şifre kullanılmalı</li>
+        <li>Sözlükteki kelimeler kullanılmamalıdır</li>
+    </ul>
+
+    <h2>Şifre Güvenliği İpuçları</h2>
+    <ul>
+        <li>Şifrenizi kimseyle paylaşmayın</li>
+        <li>Düzenli olarak değiştirin</li>
+        <li>Tarayıcılara kaydetmeyin</li>
+        <li>İki adımlı doğrulama (2FA) kullanın</li>
+        <li>Yazılı olarak şifre tutmayın; gerekiyorsa güvenli ve kilitli bir ortamda saklayın</li>
+    </ul>
+
+    <h2>Güçlü Şifre Örnekleri</h2>
+    <p>Aşağıdaki şifreler sadece örnek amaçlıdır, lütfen aynısını kullanmayın:</p>
+    <ul>
+        <li>Tu9a;gMD</li>
+        <li>hb!(Bz8XE</li>
+        <li>u$7sSsX3#</li>
+        <li>q$8.Du4e2</li>
+        <li>p&amp;Q.-N7Em</li>
+        <li>D-4VXx&gt;uG</li>
+        <li>cY}+*t{5U</li>
+        <li>(`DH4pmN</li>
+    </ul>
+
+    <h2>Yardımcı Araç</h2>
+    <p>Bu uygulamada yer alan <strong>şifre oluşturucu</strong> ile rastgele güçlü şifreler oluşturabilir, şifrelerinizi saklayabilir ve yönetebilirsiniz.</p>
+
+    <a href="{{ url_for('index') }}">
+        <button>Şifre Oluştur</button>
+    </a>
+</div>
+
+</body>
+</html>
